@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK NEWS - Hardware News</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            /* General Styles */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('bg.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed on scroll */
+    background-position: center;
+    color: #333;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 1.8rem;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .hardware-card {
+            border: none;
+            transition: transform 0.3s ease;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .hardware-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .spec-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .spec-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hardware-icon {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+         /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 300px;
+            }
+            
+            .sidebar {
+                margin-top: 20px;
+            }
+
+            .hero-section {
+                padding: 2rem 0;
+            }
+
+            .hero-section h1 {
+ font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KK NEWS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="software.html">Software</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hardware.html">Hardware</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hardware Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Hardware & Components</h1>
+            <p class="lead">Latest News in Computer Hardware and Technology</p>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="hardware-card p-4 text-center">
+                    <i class="fas fa-microchip hardware-icon"></i>
+                    <h3>Processors</h3>
+                    <p>Latest CPU architectures and performance reviews</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="hardware-card p-4 text-center">
+                    <i class="fas fa-desktop hardware-icon"></i>
+                    <h3>Graphics Cards</h3>
+                    <p>GPU releases, benchmarks, and comparisons</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="hardware-card p-4 text-center">
+                    <i class="fas fa-memory hardware-icon"></i>
+                    <h3>Memory & Storage</h3>
+                    <p>RAM, SSDs, and storage solutions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+   <div class="container mt-5">
+        <div class="row">
+            <!-- News Articles -->
+            <div class="col-lg-8">
+                <h2 class="mb-4">Latest Hardware News</h2>
+                <div class="row">
+                    <!-- Hardware News Card 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card news-card h-100">
+                            <img src="cpu.jpg" class="card-img-top" alt="Hardware News 1">
+                            <div class="card-body">
+                                <span class="category-badge mb-2 d-inline-block">Processors</span>
+                                <h5 class="card-title">Next-Gen CPU Architecture</h5>
+                                <p class="card-text">Revolutionary new processor architecture promises 40% performance gain...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://www.businessworld.in/article/intels-next-gen-panther-lake-cpus-to-feature-enhanced-neural-processing-units-535463#:~:text=Neural%20Processing%20Units-,Intel's%20Next%2Dgen%20'Panther%20Lake'%20CPUs%20To,Feature%20Enhanced%20Neural%20Processing%20Units&text=Intel%20has%20declared%20that%20its,(NPU)%2C%20named%20NPU5." class="btn btn-primary">Read More</a>
+                                    <div class="social-share">
+                                        <i class="fas fa-share-alt me-2"></i>
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware News Card 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card news-card h-100">
+                            <img src="rtx.webp" class="card-img-top" alt="Hardware News 2">
+                            <div class="card-body">
+                                <span class="category-badge mb-2 d-inline-block">Graphics Cards</span>
+                                <h5 class="card-title">RTX 5000 Series Leaked</h5>
+                                <p class="card-text">Specifications and benchmarks of upcoming GPUs revealed...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://www.tomshardware.com/pc-components/gpus/many-rtx-50-series-laptops-may-stick-with-previous-gen-cpus-for-2025-leaker-claims-affordable-cpu-product-launches-are-becoming-increasingly-difficult" class="btn btn-primary">Read More</a>
+                                    <div class="social-share">
+                                        <i class="fas fa-share-alt me-2"></i>
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware News Card 3 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card news-card h-100">
+                            <img src="cpus.png" class="card-img-top" alt="Hardware News 1">
+                            <div class="card-body">
+                                <span class="category-badge mb-2 d-inline-block">Processors</span>
+                                <h5 class="card-title">CPU Architecture</h5>
+                                <p class="card-text">Intel Hints At Dedicated Cache Tile For CPUs But Not For Desktops</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://wccftech.com/intel-hints-at-dedicated-cache-tile-for-cpus-but-not-for-desktops/" class="btn btn-primary">Read More</a>
+                                    <div class="social-share">
+                                        <i class="fas fa-share-alt me-2"></i>
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware News Card 4 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card news-card h-100">
+                            <img src="lenovo.jpg" class="card-img-top" alt="Hardware News 2">
+                            <div class="card-body">
+                                <span class="category-badge mb-2 d-inline-block">Graphics Cards</span>
+                                <h5 class="card-title">RTX 5000 Series Leaked</h5>
+                                <p class="card-text">Lenovo X1 Laptop Debuts In China With Domestic Zhaoxin KX-6000G Chip & 2.8K OLED Display</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://wccftech.com/lenovo-x1-laptop-debuts-in-china-domestic-zhaoxin-kx-6000g-chip-2-8k-oled-display/" class="btn btn-primary">Read More</a>
+                                    <div class="social-share">
+                                        <i class="fas fa-share-alt me-2"></i>
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <h3 class="mb-4">Top Hardware</h3>
+                    <ul class="spec-list">
+                        <li class="d-flex justify-content-between">
+                            <span>Best CPU</span>
+                            <strong>AMD Ryzen 9</strong>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Best GPU</span>
+                            <strong>RTX 4090</strong>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Best SSD</span>
+                            <strong>Samsung 990 Pro</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Footer  -->
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About KK NEWS</h4>
+                    <p>Your trusted source for the latest technology news, reviews, and insights.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                        <li><a href="privacy.html" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100009058727556"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/david_sind14294"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/kkumar_more/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Hardware News</li>
+            </ol>
+        </nav>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

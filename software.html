@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK NEWS - Software News</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        /* [Previous CSS styles remain the same - including animations, general styles, etc.] */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('bg.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed on scroll */
+    background-position: center;
+    color: #333;
+        
+        }
+
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 1.8rem;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .category-badge {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .software-feature {
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .software-feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .software-icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+         /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+
+
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 300px;
+            }
+            
+            .sidebar {
+                margin-top: 20px;
+            }
+
+            .hero-section {
+                padding: 2rem 0;
+            }
+
+            .hero-section h1 {
+ font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KK NEWS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="software.html">Software</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hardware.html">Hardware</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  
+
+    <!-- Software Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Software & Development</h1>
+            <p class="lead">Latest News in Software Development, Apps, and Technology</p>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="software-feature p-4 text-center">
+                    <i class="fas fa-mobile-alt software-icon"></i>
+                    <h3>Mobile Development</h3>
+                    <p>Latest updates in iOS, Android, and cross-platform development</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="software-feature p-4 text-center">
+                    <i class="fas fa-code software-icon"></i>
+                    <h3>Web Development</h3>
+                    <p>Frontend frameworks, backend technologies, and web standards</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="software-feature p-4 text-center">
+                    <i class="fas fa-brain software-icon"></i>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Artificial Intelligence and ML framework updates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- News Articles -->
+            <div class="col-lg-8">
+                <h2 class="mb-4">Latest Software News</h2>
+                <div class="row">
+                    <!-- Software News Card 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card news-card h-100">
+                            <img src="roblox.jpg" class="card-img-top" alt="Software News 1">
+                            <div class="card-body">
+                                <span class="category-badge mb-2 d-inline-block">Mobile Development</span>
+                                <h5 class="card-title">Roblox Malware</h5>
+                                <p class="card-text">Roblox developers targeted by year-long malware campaign</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://www.developer-tech.com/news/roblox-developers-targeted-year-long-malware-campaign/" class="btn btn-primary">Read More</a>
+                                    <div class="social-share">
+                                        <i class="fas fa-share-alt me-2"></i>
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software News Card 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card news-card h-100">
+                            <img src="app.jpg" class="card-img-top" alt="Software News 2">
+                            <div class="card-body">
+                                <span class="category-badge mb-2 d-inline-block">Web Development</span>
+                                <h5 class="card-title">App Store </h5>
+                                <p class="card-text">Developers get a better shot at App Store spotlight loren ipsum Lorem ipsum dolor sit amet.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://www.developer-tech.com/news/developers-get-a-better-shot-app-store-spotlight/" class="btn btn-primary">Read More</a>
+                                    <div class="social-share">
+                                        <i class="fas fa-share-alt me-2"></i>
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software News Card 3 -->
+
+                    <div class="col-md-6 mb-4">
+                        <div class="card news-card h-100">
+                            <img src="brain.jpg" class="card-img-top" alt="Software News 1">
+                            <div class="card-body">
+                                <span class="category-badge mb-2 d-inline-block">Mobile Development</span>
+                                <h5 class="card-title">IntelliJ IDEA 2024.3</h5>
+                                <p class="card-text">JetBrains 2024.3 release elevates the developer experience</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://www.developer-tech.com/news/jetbrains-2024-3-release-elevates-developer-experience/" class="btn btn-primary">Read More</a>
+                                    <div class="social-share">
+                                        <i class="fas fa-share-alt me-2"></i>
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software News Card 4 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card news-card h-100">
+                            <img src="copoilet.jpg" class="card-img-top" alt="Software News 2">
+                            <div class="card-body">
+                                <span class="category-badge mb-2 d-inline-block">Web Development</span>
+                                <h5 class="card-title">GitHub</h5>
+                                <p class="card-text">GitHub Copilot now supports multiple LLMs  </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://www.developer-tech.com/news/github-copilot-now-supports-multiple-llms/" class="btn btn-primary">Read More</a>
+                                    <div class="social-share">
+                                        <i class="fas fa-share-alt me-2"></i>
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Software News Cards... -->
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <h3 class="mb-4">Popular Topics</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Mobile Development
+                            <span class="badge bg-primary rounded-pill">12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Web Frameworks
+                            <span class="badge bg-primary rounded-pill">8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cloud Services
+                            <span class="badge bg-primary rounded-pill">6</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About KK NEWS</h4>
+                    <p>Your trusted source for the latest technology news, reviews, and insights.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                        <li><a href="privacy.html" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100009058727556"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/david_sind14294"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/kkumar_more/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <!-- Breadcrumb -->
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Software News</li>
+            </ol>
+        </nav>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
